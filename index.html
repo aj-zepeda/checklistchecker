@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NASCAR Trading Card Checklist Browser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>NASCAR Trading Card Checklist Browser</h1>
+      <p id="loadStatus">Loading bundled checklists…</p>
+    </div>
+    <button id="resetBtn" class="button secondary" type="button">Reset Filters</button>
+  </header>
+
+  <section class="filters" aria-label="Checklist filters">
+    <label>
+      <span>Year</span>
+      <select id="yearFilter" disabled>
+        <option value="">All Years</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Product</span>
+      <select id="programFilter" disabled>
+        <option value="">All Products</option>
+      </select>
+    </label>
+
+    <label class="set-filter">
+      <span>Card Set</span>
+      <input id="cardSetFilter" type="search" list="cardSetOptions"
+             placeholder="All Card Sets" disabled autocomplete="off">
+      <datalist id="cardSetOptions"></datalist>
+    </label>
+
+    <label>
+      <span>Athlete Search</span>
+      <input id="athleteSearch" type="search" placeholder="Search driver / athlete…" disabled>
+    </label>
+  </section>
+
+  <main class="workspace">
+    <section class="panel athlete-panel">
+      <div class="panel-title">
+        <h2>Athletes</h2>
+        <span id="athleteCount" class="count">0</span>
+      </div>
+      <div id="athleteList" class="scroll-list empty">Loading…</div>
+    </section>
+
+    <section class="panel cards-panel">
+      <div class="panel-title">
+        <div>
+          <h2 id="cardsHeading">Cards</h2>
+          <div id="activeFilters" class="subtext">All checklists</div>
+        </div>
+        <span id="cardCount" class="count">0</span>
+      </div>
+      <div id="cardsList" class="scroll-list empty">Select an athlete.</div>
+    </section>
+
+    <section class="panel detail-panel">
+      <div class="panel-title">
+        <h2>Card Details</h2>
+        <span id="positionText" class="subtext"></span>
+      </div>
+      <div id="detailsGrid" class="details"></div>
+      <div class="navigation">
+        <button id="firstBtn" class="button" type="button">First</button>
+        <button id="backBtn" class="button" type="button">‹ Back</button>
+        <button id="nextBtn" class="button" type="button">Next ›</button>
+        <button id="lastBtn" class="button" type="button">Last</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footerStatus">Checklist data stays on this website; visitors do not upload anything.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
