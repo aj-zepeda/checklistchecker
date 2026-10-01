@@ -3,7 +3,7 @@ NASCAR Trading Card Checklist Browser
 
 READY FOR GITHUB PAGES
 
-This project contains all 47 checklist CSV files supplied in "all checklists.zip".
+This project contains the original 47 checklist CSV files plus 2026 Panini Track Kings Racing.
 Visitors do NOT need to upload any files.
 
 FILES
@@ -12,7 +12,7 @@ index.html
 style.css
 app.js
 checklists.json
-checklists/   (47 CSV files)
+checklists/   (48 CSV files)
 
 FILTERS
 -------
@@ -47,10 +47,11 @@ Test it through GitHub Pages, or through a local web server.
 
 DATA
 ----
-Checklist CSVs: 47
+Checklist CSVs: 48
 Expected columns:
 SPORT, YEAR, BRAND, PROGRAM, CARD SET, ATHLETE, TEAM, POSITION,
 CARD NUMBER, SEQUENCE
 
 All checklist data is static and publicly downloadable from the GitHub
 Pages repository/site. Do not include private data in the CSV files.
+

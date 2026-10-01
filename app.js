@@ -43,7 +43,7 @@ cardSetFilter.addEventListener("input",()=>{
   selectedAthlete="";
   updateAllFilters();
 });
-athleteSearch.addEventListener("input",renderAthletes);
+athleteSearch.addEventListener("input",()=>renderAthletes());
 
 $("firstBtn").addEventListener("click",()=>goToCard(0));
 $("backBtn").addEventListener("click",()=>goToCard(currentIndex-1));
